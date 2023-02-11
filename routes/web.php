@@ -2,6 +2,7 @@
 
 use App\Models\VUser;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use Yajra\DataTables\Facades\DataTables;
 
@@ -14,8 +15,13 @@ Route::get('/', function () {
 Route::get('/data', function (Request $r) {
     if ($r->ajax()) {
 
-        $data = VUser::query();
-        return DataTables::eloquent($data)
+        // $data = DB::table('v_users'); //success
+        // return DataTables::of($data) //success
+        // $data = DB::select('select * from v_users'); //error
+        // return DataTables::of($data) //error
+
+        $data = VUser::query(); //success
+        return DataTables::eloquent($data) //success
             ->addColumn('action', 'partial-action')
             ->filter(function ($query) {
                 if (request()->has('name')) {
