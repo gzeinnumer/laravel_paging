@@ -1,4 +1,5 @@
-![]('/preview/preview1.png')
+| <img src="/preview/preview1.png" width="300"/> |
+| ---------------------------------------------- |
 
 -   [Source](https://yajrabox.com/docs/laravel-datatables/10.0/installation)
 
