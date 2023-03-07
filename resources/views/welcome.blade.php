@@ -12,6 +12,7 @@
 
 <body>
     <div class="container">
+        <a href="/export">Export</a>
         <table id="myTable" class="table table-stripped">
             <thead>
                 <tr>

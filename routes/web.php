@@ -1,10 +1,14 @@
 <?php
 
+use App\Exports\UserExport;
+use App\Http\Controllers\UserController;
+use App\Models\User;
 use App\Models\VUser;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use Yajra\DataTables\Facades\DataTables;
+
+Route::get('/export', [UserController::class, 'export']);
 
 //https://www.youtube.com/watch?v=VE3bJIC9Swk&ab_channel=KawanKoding
 
@@ -17,6 +21,7 @@ Route::get('/data', function (Request $r) {
 
         // $data = DB::table('v_users'); //success
         // return DataTables::of($data) //success
+
         // $data = DB::select('select * from v_users'); //error
         // return DataTables::of($data) //error
 
