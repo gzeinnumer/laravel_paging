@@ -8,6 +8,7 @@ composer require yajra/laravel-datatables:^9.0
 ```
 
 ```
+//app.php
 'providers' => [
     // ...
     Yajra\DataTables\DataTablesServiceProvider::class,
