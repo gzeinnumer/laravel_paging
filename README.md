@@ -52,6 +52,7 @@ class VUser extends Model
 ```
 
 ```php
+// use Yajra\DataTables\Facades\DataTables;
 Route::get('/', function () {
     return view('welcome');
 });
